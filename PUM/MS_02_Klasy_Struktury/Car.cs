@@ -19,8 +19,8 @@ namespace MS_02_Klasy_Struktury
 
         public Car(string brand, string color)
         {
-            _brand = brand;
             Color = color;
+            _brand = brand;
         }
 
         public void DisplayBrand()
