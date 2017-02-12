@@ -15,6 +15,12 @@ public class HelloWorld {
         System.out.println("\n"+pnr+count);
         count++;
     }
+
+    public static void funkcja(String linia)
+    {
+        System.out.println(linia);
+    }
+
     public static void main(String[] args) throws FileNotFoundException
     {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -87,6 +93,8 @@ public class HelloWorld {
 
         for(int x : tablica_each)
             System.out.println(x);
+
+        funkcja("batata");
 
     }
 
