@@ -58,6 +58,7 @@ int main()
 	{
 		addr.s_addr = *(u_long *)remoteHost->h_addr_list[i];
 		printf("%s\n", inet_ntoa(addr));
+
 		i++;
 	}
 	
