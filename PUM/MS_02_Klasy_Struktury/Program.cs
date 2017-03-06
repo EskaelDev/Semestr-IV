@@ -10,8 +10,10 @@ namespace MS_02_Klasy_Struktury
     {
         static void Main(string[] args)
         {
-
-            Car car = new Car("BMW", "white");   
+            Car car = new Car("BMW", "white");
+            car.Brand = "chauwa";
+            car.DisplayBrand();
+            Console.ReadKey();
             
         }
     }
