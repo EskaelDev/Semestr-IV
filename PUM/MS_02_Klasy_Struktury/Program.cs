@@ -10,6 +10,7 @@ namespace MS_02_Klasy_Struktury
     {
         static void Main(string[] args)
         {
+
             Car car = new Car("BMW", "white");   
             
         }
