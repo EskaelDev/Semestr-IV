@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+
+    <style>
+        body{
+            background-color: #222;
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <script type="text/javascript">
+
+        var numer = Math.floor(Math.random()*4)+1;
+
+        var timer1=0;
+        var timer2=0;
+
+        function ustawSlajd(nrSlajdu) {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+            numer=nrSlajdu-1;
+
+            schowaj();
+            setTimeout("zmienSlajd()", 500)
+        }
+        function schowaj() {
+            $("#slider").fadeOut(500);
+        }
+
+        function zmienSlajd() {
+            numer++;
+            if(numer>4)
+                numer=1;
+
+            var plik="<img src=\"slajdy/slajd" + numer+ ".jpg\"/>";
+            document.getElementById("slider").innerHTML=plik;
+            $("#slider").fadeIn(500);
+
+            timer1=setTimeout("zmienSlajd()", 5000);
+            timer2=setTimeout("schowaj()", 4500);
+        }
+    </script>
+</head>
+<body onload="zmienSlajd()">
+<span onclick="ustawSlajd(1)" style="cursor: pointer;">[1]</span>
+<span onclick="ustawSlajd(2)" style="cursor: pointer;">[2]</span>
+<span onclick="ustawSlajd(3)" style="cursor: pointer;">[3]</span>
+<span onclick="ustawSlajd(4)" style="cursor: pointer;">[4]</span>
+
+<div id="slider"></div>
+
+</body>
+</html>
